@@ -19,6 +19,13 @@ h2 {
     color: whitesmoke
 }
 
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: whitesmoke
+}
+
 button {
     border: none;
     padding-top: 10px;
