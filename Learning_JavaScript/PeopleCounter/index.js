@@ -10,7 +10,7 @@ let prevCounts = document.getElementById("previous-counts")
 // listen for clicks on the increment button
 function increment() {
     // increment the count variable when the button is clicked
-    count = count + 1
+    count += 1
 
     // change the count-el in the HTML to reflect the new count
     countEl.innerText = count
@@ -19,8 +19,7 @@ function increment() {
 // save function for the save button to record number of people
 function save() {
     // update the previous-count element
-    prevCounts.innerText =  prevCounts.innerText + " - " + count.toString()
-    console.log(prevCounts.innerText)
+    prevCounts.textContent += count + ", "
 
     // reset the main count back to 0
     count = 0
