@@ -6,6 +6,8 @@ body {
     text-align: center;
     height: 100vh;
     color: whitesmoke;
+    margin: auto;
+    padding-top: 10%;
 }
 
 h1 {
@@ -25,5 +27,6 @@ button {
     padding-bottom: 7px;
     font-weight: bold;
     border-radius: 4px;
+    margin-bottom: 8px;
 }
 

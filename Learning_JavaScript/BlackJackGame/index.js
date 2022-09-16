@@ -9,14 +9,14 @@ let isAlive = true
 let hasBlackJack = false
 let message = ""
 let messageEl = document.getElementById("message-el")
-let yourCards = document.getElementById("your-cards")
-let total = document.getElementById("total")
 
+let cardsEl = document.getElementById("cards-el")
+let sumEl = document.querySelector("#sum-el")
 
 function startGame() {
-    yourCards.textContent = firstCard + " / " + secondCard
-    total.textContent = firstCard + secondCard
-    
+    cardsEl.textContent = "Your Cards: " + firstCard + " " + secondCard
+    sumEl.textContent = "Total: " + sum
+
     // if else logic
     if (sum <= 20) {
         message = "Do you want another card"
@@ -29,5 +29,12 @@ function startGame() {
     }
 
     messageEl.textContent = message
+}
+
+function hit() {
+    let newCard = getRandomCard()
+    cardsEl.textContent = "Your Cards: " + firstCard + " " + secondCard + " " + newCard
+    let newSum = newCard + sum
+    sumEl.textContent = "Total: " + newSum
 }
 
