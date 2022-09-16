@@ -9,22 +9,27 @@ let isAlive = true
 let hasBlackJack = false
 let message = ""
 let messageEl = document.getElementById("message-el")
-
 let cardsEl = document.getElementById("cards-el")
 let sumEl = document.querySelector("#sum-el")
 
+let cards = [firstCard, secondCard]
+
 function startGame() {
-    cardsEl.textContent = "Your Cards: " + firstCard + " " + secondCard
+    renderGame()
+}
+
+function renderGame() {
+    cardsEl.textContent = "Your Cards: " + cards[0] + " " + cards[1]
     sumEl.textContent = "Total: " + sum
 
     // if else logic
     if (sum <= 20) {
-        message = "Do you want another card"
+        message = "Do you want another card?"
     } else if (sum === 21) {
         message = "Congrats you have Black Jack!"
         hasBlackJack = true
     } else {
-        message = "Sorry hand is bust, you lose."
+        message = "Sorry, busted you lose."
         isAlive = false
     }
 
@@ -33,8 +38,7 @@ function startGame() {
 
 function hit() {
     let newCard = getRandomCard()
-    cardsEl.textContent = "Your Cards: " + firstCard + " " + secondCard + " " + newCard
-    let newSum = newCard + sum
-    sumEl.textContent = "Total: " + newSum
+    sum += newCard
+    renderGame()
 }
 
