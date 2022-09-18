@@ -18,6 +18,10 @@ h1 {
     font-style: italic;
 }
 
+#dealer-sum-el {
+    margin-bottom: 40px;
+}
+
 button {
     background-color: goldenrod;
     color: #016f32;
