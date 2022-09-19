@@ -8,6 +8,15 @@ let cardsEl = document.getElementById("cards-el")
 let sumEl = document.querySelector("#sum-el")
 let cards = []
 
+let player = {
+    name: "Andrew",
+    chips: 100
+}
+
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
 function getRandomCard() {
     return Math.floor(Math.random()*10)+2
 }
