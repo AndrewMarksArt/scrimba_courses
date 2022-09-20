@@ -27,3 +27,17 @@ button {
     margin-top: 12px;
     font-weight: bold;
 }
+
+ul {
+    margin-top: 16px;
+    list-style: none;
+    padding-left: 8px;
+}
+
+li {
+    margin-top: 8px;
+}
+
+li a {
+    color: #5f9341;
+}
