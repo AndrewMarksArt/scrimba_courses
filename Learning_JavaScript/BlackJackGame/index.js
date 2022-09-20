@@ -36,7 +36,8 @@ function startGame() {
     let dealerFirstCard = getRandomCard()
     let dealerSecondCard = getRandomCard()
     dealerCards = [dealerFirstCard, dealerSecondCard]
-    dealerSum = dealerCards[0] + dealerCards[1]
+    dealerSumEl.textContent += dealerCards[0]
+    dealerCardsEl.textContent = dealerCards[0]
 
     hasBlackJack = false
     isAlive = true
@@ -46,11 +47,6 @@ function startGame() {
     sum = firstCard + secondCard
 
     renderGame()
-    dealerSetup()
-}
-
-function dealerSetup() {
-    dealerCardsEl.textContent = "Dealers Cards: " + dealerCards[0]
 }
 
 function renderGame() {
@@ -75,7 +71,7 @@ function renderGame() {
         for ( let i=0; i<dealerCards.length; i++) {
             dealerCardsEl.textContent += cards[i] + " "
         }
-
+        dealerSum = dealerCards[0] + dealerCards[1]
         dealerSumEl.textContent = "Dealers Total: " + dealerSum
     }
 
