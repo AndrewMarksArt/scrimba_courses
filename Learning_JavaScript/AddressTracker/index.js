@@ -4,11 +4,14 @@ const inputBtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el")
 const ulEL = document.getElementById("ul-el")
 
+let addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
+console.log(addressesFromLocal)
+
 inputBtn.addEventListener("click", function () {
     myAddresses.push(inputEl.value)
     inputEl.value = ''
 
-    localStorage.setItem("myAdresses", JSON.stringify(myAddresses))
+    localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
 
     renderAddresses()
 
