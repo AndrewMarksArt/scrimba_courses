@@ -17,6 +17,25 @@ body {
     box-shadow: 5px 5px #000000;
 }
 
+#title-el {
+    margin-top: 12px;
+}
+
+textarea {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #761c8d;
+    border-radius: 8px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+}
 input {
     width: 100%;
     padding-left: 10px;
@@ -24,7 +43,7 @@ input {
     padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
-    border: 2px solid #7e217c;
+    border: 2px solid #761c8d;
     border-radius: 8px;
 }
 p {
@@ -35,7 +54,7 @@ p {
 
 button {
     color: whitesmoke;
-    background-color: #53073a;
+    background-color: #761c8d;
     border: 2px solid #000000;
     border-radius: 8px;
     padding: 8px;
