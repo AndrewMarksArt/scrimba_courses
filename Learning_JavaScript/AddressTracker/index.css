@@ -88,5 +88,9 @@ li a {
 }
 
 #list-heading {
-    margin-top: -8px;
+
+}
+
+th {
+    text-align: left;
 }
