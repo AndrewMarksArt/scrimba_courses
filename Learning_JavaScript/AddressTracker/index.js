@@ -7,6 +7,7 @@ const urlEl = document.getElementById("url-el")
 const addressEl = document.getElementById("address-el")
 const notesEl = document.getElementById("notes-el")
 
+const addressTable = document.getElementById("saved-addresses-el").getElementsByTagName('tbody')[0]
 const ulEL = document.getElementById("ul-el")
 
 let addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
@@ -43,4 +44,12 @@ function renderAddresses() {
         `
     }
     ulEL.innerHTML = listItems
+
+    let newRow = addressTable.insertRow(addressTable.rows.length)
+    let testHTML = `
+        <td>test title</td>
+        <td>test note</td>
+        <td><a target='_blank' href=''>details</a></td>
+    `
+    newRow.innerHTML = testHTML
 }
