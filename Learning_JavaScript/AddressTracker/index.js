@@ -1,4 +1,5 @@
 let myAddresses = []
+let rowItems = ""
 
 const inputBtn = document.getElementById("input-btn")
 
@@ -16,7 +17,7 @@ let addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
 if (addressesFromLocal) {
     console.log("there are addresses saved in local storage")
     myAddresses = addressesFromLocal
-    renderAddresses()
+    loadAddresses()
 } else {
     console.log("nothing here")
 }
@@ -33,21 +34,35 @@ inputBtn.addEventListener("click", function () {
 
     renderAddresses()
 
-    titleEl.textContent = ''
+    titleEl.value = ""
+    addressEl.value = ""
+    urlEl.value = ""
+    notesEl.value = ""
 })
 
-function renderAddresses() {
-    let rowItems = ""
+function loadAddresses() {
     
     for (let i=0; i<myAddresses.length; i++) {
         let newRow = addressTable.insertRow(addressTable.rows.length)
         rowItems = `
         <td>${myAddresses[i]["title"]}</td>
         <td>${myAddresses[i]["note"]}</td>
-        <td><a target='_blank' href=''>${myAddresses[i]["url"]}</a></td>
+        <td><a target='_blank' href='${myAddresses[i]["url"]}'>${myAddresses[i]["url"]}</a></td>
         `
         newRow.innerHTML = rowItems
-
     }
+    
+}
+
+function renderAddresses() {
+    let last = myAddresses.length - 1
+    
+    let newRow = addressTable.insertRow(addressTable.rows.length)
+    rowItems = `
+        <td>${myAddresses[last]["title"]}</td>
+        <td>${myAddresses[last]["note"]}</td>
+        <td><a target='_blank' href='${myAddresses[last]["url"]}'>${myAddresses[last]["url"]}</a></td>
+    `
+    newRow.innerHTML = rowItems
     
 }
