@@ -17,10 +17,6 @@ body {
     box-shadow: 5px 5px #000000;
 }
 
-#input-el {
-    margin-top: 12px;
-}
-
 textarea {
     width: 100%;
     padding-left: 10px;
@@ -28,6 +24,13 @@ textarea {
     padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
+    border: 2px solid #d3b9d9;
+    border-radius: 0px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;   
     border: 2px solid #761c8d;
     border-radius: 0px;
 }
@@ -35,6 +38,7 @@ textarea {
 label {
     display: inline-block;
     text-align: left;
+    margin-top: 12px;
 }
 
 input {
@@ -44,12 +48,14 @@ input {
     padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
-    border: 2px solid #a48fa9;
+    border: 2px solid #d3b9d9;
     border-radius: 0px;
 }
 
 input:focus {
-    border: #7e217c;
+    outline: none;   
+    border: 2px solid #761c8d;
+    border-radius: 0px;
 }
 
 
