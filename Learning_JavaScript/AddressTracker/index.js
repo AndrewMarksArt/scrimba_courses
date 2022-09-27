@@ -1,7 +1,12 @@
 let myAddresses = []
 
 const inputBtn = document.getElementById("input-btn")
-const inputEl = document.getElementById("input-el")
+
+const titleEl = document.getElementById("title-el")
+const urlEl = document.getElementById("url-el")
+const addressEl = document.getElementById("address-el")
+const notesEl = document.getElementById("notes-el")
+
 const ulEL = document.getElementById("ul-el")
 
 let addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
