@@ -47,7 +47,7 @@ function loadAddresses() {
         rowItems = `
         <td>${myAddresses[i]["title"]}</td>
         <td>${myAddresses[i]["note"]}</td>
-        <td><a target='_blank' href='${myAddresses[i]["url"]}'>${myAddresses[i]["url"]}</a></td>
+        <td style="text-align: right"><a target='_blank' href='${myAddresses[i]["url"]}'>expand</a></td>
         `
         newRow.innerHTML = rowItems
     }
@@ -61,7 +61,7 @@ function renderAddresses() {
     rowItems = `
         <td>${myAddresses[last]["title"]}</td>
         <td>${myAddresses[last]["note"]}</td>
-        <td><a target='_blank' href='${myAddresses[last]["url"]}'>${myAddresses[last]["url"]}</a></td>
+        <td style="text-align: right"><a target='_blank' href='${myAddresses[last]["url"]}'>expand</a></td>
     `
     newRow.innerHTML = rowItems
     

@@ -111,4 +111,10 @@ td {
     padding-top: 6px;
     padding-bottom: 6px;
     border-bottom: 1px solid #d3b9d9;
+    overflow: hidden;
+}
+
+table {
+    table-layout: fixed;
+    white-space: nowrap;
 }
