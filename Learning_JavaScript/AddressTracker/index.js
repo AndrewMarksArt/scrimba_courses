@@ -22,14 +22,22 @@ if (addressesFromLocal) {
 }
 
 inputBtn.addEventListener("click", function () {
-    myAddresses.push(inputEl.value)
-    inputEl.value = ''
+    let temp = {}
+    temp["title"] = titleEl.value
+    temp["address"] = addressEl.value
+    temp["url"] = urlEl.value
+    temp["note"] = notesEl.value
+
+    console.log(temp)
+
+    myAddresses.push(temp)
 
     localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
 
     renderAddresses()
 
-    console.log(localStorage.getItem("myAddresses"))
+    // console.log(localStorage.getItem("myAddresses"))
+    console.log(myAddresses[myAddresses.length-1]["title"])
 })
 
 function renderAddresses() {
