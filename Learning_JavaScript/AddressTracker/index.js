@@ -28,36 +28,26 @@ inputBtn.addEventListener("click", function () {
     temp["url"] = urlEl.value
     temp["note"] = notesEl.value
 
-    console.log(temp)
-
     myAddresses.push(temp)
-
     localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
 
     renderAddresses()
 
-    // console.log(localStorage.getItem("myAddresses"))
-    console.log(myAddresses[myAddresses.length-1]["title"])
+    titleEl.textContent = ''
 })
 
 function renderAddresses() {
-    let listItems = ""
+    let rowItems = ""
+    
     for (let i=0; i<myAddresses.length; i++) {
-        listItems += `
-            <li>
-                <a target='_blank' href='${myAddresses[i]}'>
-                    ${myAddresses[i]}
-                </a>
-            </li>
+        let newRow = addressTable.insertRow(addressTable.rows.length)
+        rowItems = `
+        <td>${myAddresses[i]["title"]}</td>
+        <td>${myAddresses[i]["note"]}</td>
+        <td><a target='_blank' href=''>${myAddresses[i]["url"]}</a></td>
         `
-    }
-    ulEL.innerHTML = listItems
+        newRow.innerHTML = rowItems
 
-    let newRow = addressTable.insertRow(addressTable.rows.length)
-    let testHTML = `
-        <td>test title</td>
-        <td>test note</td>
-        <td><a target='_blank' href=''>details</a></td>
-    `
-    newRow.innerHTML = testHTML
+    }
+    
 }

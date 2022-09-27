@@ -81,7 +81,7 @@ button {
 
 button:hover {
     margin-top: 9px;
-    margin-left: -3px;
+    margin-left: -5px;
     margin-bottom: 15px;
     box-shadow: 3px 3px #000000;
 }
