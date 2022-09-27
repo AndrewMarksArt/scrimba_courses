@@ -103,4 +103,12 @@ li a {
 
 th {
     text-align: left;
+    border-bottom: 1px solid #d3b9d9;
+    padding-bottom: 6px;
+}
+
+td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d3b9d9;
 }
