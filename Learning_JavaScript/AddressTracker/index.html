@@ -6,7 +6,7 @@
         <div id="container">
             <div>
                 <label>Title: </label>
-                <input class="focus" type="text" id="title-el">
+                <input class="focus" type="text" id="title-el" required/>
             </div>
             <div>
                 <label>URL: </label>
@@ -21,8 +21,14 @@
                 <label>Notes: </label>
                 <textarea name="notes" id="notes-el" rows="5"></textarea>
             </div>
-            
-            <button id="input-btn">SAVE</button>
+
+            <div>
+                <button id="save-btn">SAVE</button>    
+            </div>
+            <div>
+                <button id="delete-btn">CLEAR</button>    
+            </div>
+
         </div>
         <div id="container">
             <p id="list-heading">Saved adddress, quick note, and link for more details.</p>

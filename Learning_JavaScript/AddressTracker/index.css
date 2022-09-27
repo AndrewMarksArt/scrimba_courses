@@ -86,6 +86,13 @@ button:hover {
     box-shadow: 3px 3px #000000;
 }
 
+#delete-btn {
+    margin-top: 0px;
+    background-color: whitesmoke;
+    color: #761c8d;
+}
+
+
 ul {
     margin-top: 16px;
     list-style: none;

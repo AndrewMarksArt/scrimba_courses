@@ -1,7 +1,8 @@
 let myAddresses = []
 let rowItems = ""
 
-const inputBtn = document.getElementById("input-btn")
+const saveBtn = document.getElementById("save-btn")
+const deleteBtn = document.getElementById("delete-btn")
 
 const titleEl = document.getElementById("title-el")
 const urlEl = document.getElementById("url-el")
@@ -11,7 +12,7 @@ const notesEl = document.getElementById("notes-el")
 const addressTable = document.getElementById("saved-addresses-el").getElementsByTagName('tbody')[0]
 const ulEL = document.getElementById("ul-el")
 
-let addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
+const addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
 // check if localStorage has anything
 // if there is localStorage, set myAddresses to what is there then render out
 if (addressesFromLocal) {
@@ -22,22 +23,35 @@ if (addressesFromLocal) {
     console.log("nothing here")
 }
 
-inputBtn.addEventListener("click", function () {
-    let temp = {}
-    temp["title"] = titleEl.value
-    temp["address"] = addressEl.value
-    temp["url"] = urlEl.value
-    temp["note"] = notesEl.value
+deleteBtn.addEventListener("dblclick", function() {
+    console.log("clear btn clicked!")
+})
 
-    myAddresses.push(temp)
-    localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
+saveBtn.addEventListener("click", function () {
+    if (
+        titleEl.value == null || titleEl.value == "",
+        addressEl.value == null || addressEl.value == "",
+        urlEl.value == null || urlEl.value == "",
+        notesEl.value == null || notesEl.value == "") {
+            console.log("missing required inputs.")
+            alert("Please enter input for Title, Address, URL, and Notes before saving.")
+    } else {
+        let temp = {}
+        temp["title"] = titleEl.value
+        temp["address"] = addressEl.value
+        temp["url"] = urlEl.value
+        temp["note"] = notesEl.value
 
-    renderAddresses()
+        myAddresses.push(temp)
+        localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
 
-    titleEl.value = ""
-    addressEl.value = ""
-    urlEl.value = ""
-    notesEl.value = ""
+        renderAddresses()
+
+        titleEl.value = ""
+        addressEl.value = ""
+        urlEl.value = ""
+        notesEl.value = ""
+    }
 })
 
 function loadAddresses() {
