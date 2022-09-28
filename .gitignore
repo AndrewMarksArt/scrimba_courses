@@ -1,2 +1,4 @@
 # Environments
 .venv
+package-lock
+package.json
