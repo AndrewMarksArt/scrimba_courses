@@ -1,17 +1,21 @@
 // import React from "react"
 // import ReactDOM from "react-dom/client"
 
-function PageComponent () {
+function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./icon.jpg" width="40px" />
+            </nav>
+        </header>
+    )
+}
+
+function MainContent() {
     return (
         <div>
-            <header>
-                <nav>
-                    <img src="./icon.jpg" width="40px" />
-                </nav>
-            </header>
-            
             <h1>FunFacts about React</h1>
-            
+
             <ul>
                 <li>Was first released in 2013</li>
                 <li>Was originally created by Jordan Walke</li>
@@ -19,13 +23,27 @@ function PageComponent () {
                 <li>Is maintained by Facebook</li>
                 <li>Powers thousands of enterprise apps, including mobile apps</li>
             </ul>
+        </div>
+    )
+}
 
-            <footer>
-                <small>@ 2022 Marks development. all rights reserved</small>
-            </footer>
+function Footer() {
+    return (
+        <footer>
+            <small>@ 2022 Marks development. all rights reserved</small>
+        </footer>
+    )
+}
+
+function Page() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
         </div>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<PageComponent />)
+root.render(<Page />)
