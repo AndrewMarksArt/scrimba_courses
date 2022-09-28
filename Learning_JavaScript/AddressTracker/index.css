@@ -93,6 +93,10 @@ button:hover {
     color: #761c8d;
 }
 
+#get-url-btn {
+    margin-top: 0px;
+}
+
 
 ul {
     margin-top: 16px;

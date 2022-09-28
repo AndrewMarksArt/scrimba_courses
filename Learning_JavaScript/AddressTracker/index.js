@@ -2,6 +2,7 @@ let myAddresses = []
 let rowItems = ""
 
 const saveBtn = document.getElementById("save-btn")
+const getUrlBtn = document.getElementById("get-url-btn")
 const deleteBtn = document.getElementById("delete-btn")
 
 const titleEl = document.getElementById("title-el")
@@ -19,15 +20,20 @@ if (addressesFromLocal) {
     console.log("there are addresses saved in local storage")
     myAddresses = addressesFromLocal
     loadTable(myAddresses)
-} else {
-    console.log("nothing here")
 }
 
-deleteBtn.addEventListener("dblclick", function() {
+deleteBtn.addEventListener("dblclick", function () {
     console.log("clear btn clicked!")
     localStorage.clear()
     myAddresses=[]
     location.reload()
+    
+})
+
+getUrlBtn.addEventListener("click", function () {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        urlEl.value = tabs[0].url
+    })
     
 })
 
