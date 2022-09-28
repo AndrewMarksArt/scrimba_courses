@@ -18,13 +18,17 @@ const addressesFromLocal = JSON.parse(localStorage.getItem("myAddresses"))
 if (addressesFromLocal) {
     console.log("there are addresses saved in local storage")
     myAddresses = addressesFromLocal
-    loadAddresses()
+    loadTable(myAddresses)
 } else {
     console.log("nothing here")
 }
 
 deleteBtn.addEventListener("dblclick", function() {
     console.log("clear btn clicked!")
+    localStorage.clear()
+    myAddresses=[]
+    location.reload()
+    
 })
 
 saveBtn.addEventListener("click", function () {
@@ -45,7 +49,7 @@ saveBtn.addEventListener("click", function () {
         myAddresses.push(temp)
         localStorage.setItem("myAddresses", JSON.stringify(myAddresses))
 
-        renderAddresses()
+        renderNewRow(myAddresses)
 
         titleEl.value = ""
         addressEl.value = ""
@@ -54,28 +58,28 @@ saveBtn.addEventListener("click", function () {
     }
 })
 
-function loadAddresses() {
+function loadTable(items) {
     
-    for (let i=0; i<myAddresses.length; i++) {
+    for (let i=0; i<items.length; i++) {
         let newRow = addressTable.insertRow(addressTable.rows.length)
         rowItems = `
-        <td>${myAddresses[i]["title"]}</td>
-        <td>${myAddresses[i]["note"]}</td>
-        <td style="text-align: right"><a target='_blank' href='${myAddresses[i]["url"]}'>expand</a></td>
+        <td>${items[i]["title"]}</td>
+        <td>${items[i]["note"]}</td>
+        <td style="text-align: right"><a target='_blank' href='${items[i]["url"]}'>expand</a></td>
         `
         newRow.innerHTML = rowItems
     }
     
 }
 
-function renderAddresses() {
-    let last = myAddresses.length - 1
+function renderNewRow(items) {
+    let last = items.length - 1
     
     let newRow = addressTable.insertRow(addressTable.rows.length)
     rowItems = `
-        <td>${myAddresses[last]["title"]}</td>
-        <td>${myAddresses[last]["note"]}</td>
-        <td style="text-align: right"><a target='_blank' href='${myAddresses[last]["url"]}'>expand</a></td>
+        <td>${items[last]["title"]}</td>
+        <td>${items[last]["note"]}</td>
+        <td style="text-align: right"><a target='_blank' href='${items[last]["url"]}'>expand</a></td>
     `
     newRow.innerHTML = rowItems
     
