@@ -1,4 +1,6 @@
 # Environments
 .venv
+.env
 package-lock
 package.json
+node_modules
