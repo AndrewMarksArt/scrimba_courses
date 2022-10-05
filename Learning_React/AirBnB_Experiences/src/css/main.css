@@ -14,6 +14,14 @@ nav {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+.gray {
+    color: #918E9B;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .nav--logo {
     max-width: 100px;
 }
@@ -37,19 +45,27 @@ nav {
 }
 
 .hero--paragraph {
-    max-width: 320px;
-    height: 56px;
-    padding-left: 36px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 110%;
-
-    color: #222222;
+    margin-left: 36px;
 }
 
 section {
     padding: 20px;
+}
+
+.card {
+    width: 176px;
+    font-size: 12px;
+}
+
+.card--image {
+    width: 100%;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+
+.card--star {
+    height: 14px;
 }
