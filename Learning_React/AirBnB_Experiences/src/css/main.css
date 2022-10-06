@@ -55,10 +55,11 @@ section {
 .card {
     width: 176px;
     font-size: 12px;
+    padding-left: 24px;
 }
 
 .card--image {
-    width: 100%;
+    width: 176px;
 }
 
 .card--stats {
@@ -68,4 +69,10 @@ section {
 
 .card--star {
     height: 14px;
+}
+
+.card--title {
+    font-size: 12px;
+    font-weight: lighter;
+    width: 176px;
 }

@@ -1,17 +1,18 @@
 import "../css/main.css"
 
-export default function Card() {
+export default function Card(props) {
+
     return (
         <div className="card">
-            <img src="../src/assets/katie_zaferes_card.png" className="card--image"/>
+            <img src={props.img} className="card--image"/>
             <div className="card--stats">
                 <img src="../src/assets/star.png" className="card--star"/>
-                <span>5.0</span>
-                <span className="gray">(6) • </span>
-                <span className="gray">USA</span>
+                <span>{props.rating}</span>
+                <span className="gray">{props.num_reviews} • </span>
+                <span className="gray">{props.country}</span>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136</span> / person</p>
+            <p className="card--title">{props.title}</p>
+            <p><span className="bold">From {props.price}</span> / person</p>
         </div>
     )
 }
