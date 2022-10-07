@@ -4,7 +4,11 @@
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Karla", sans-serif;
+}
+
+main {
+    padding: 36px;
 }
 
 .header {
@@ -31,4 +35,29 @@ body {
     margin-left: auto;
     font-size: 12px;
     font-weight: 500;
+}
+
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+}
+
+.form--input {
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    font-family: "Karla", sans-serif;
+    text-indent: 5px;
+}
+
+.form--button {
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    border: 0px;
+    border-radius: 5px;
+    grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
 }

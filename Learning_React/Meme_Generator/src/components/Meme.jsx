@@ -1,9 +1,13 @@
-import "./css/main.css"
+import "../css/main.css"
 
 export default function Meme() {
     return (
-        <>
-            <h1>This is where the form and button go</h1>
-        </>
+        <main>
+            <form className="form">
+                <input type="text" className="form--input" placeholder="Top text" />
+                <input type="text" className="form--input" placeholder="Bottom text" />
+                <button className="form--button">Get a new meme image 🖼️</button>
+            </form>
+        </main>
     )
 }
