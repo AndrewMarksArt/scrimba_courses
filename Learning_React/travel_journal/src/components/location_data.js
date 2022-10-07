@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        coverImg: "../src/assets/hawaii.png",
+        coverImg: "hawaii.png",
         state: "Hawaii",
         mapLink: "https://goo.gl/maps/AUXRSh6xCYKBTLDj7",
         title: "Aulani, Disney Resort",
@@ -13,7 +13,7 @@ export default [
     },
     {
         id: 2,
-        coverImg: "../src/assets/myrtle_beach.png",
+        coverImg: "myrtle_beach.png",
         state: "SOUTH CAROLINA",
         mapLink: "https://goo.gl/maps/62Nv6FNpCoPt5q3t5",
         title: "Myrtle Beach",
@@ -26,7 +26,7 @@ export default [
     },
     {
         id: 3,
-        coverImg: "../src/assets/chattanooga.png",
+        coverImg: "chattanooga.png",
         state: "TENNESSEE",
         mapLink: "https://goo.gl/maps/SxBsx3vfzzP5vpJo7",
         title: "Chattanooga",
