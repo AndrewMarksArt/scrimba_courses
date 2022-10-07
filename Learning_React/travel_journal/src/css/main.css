@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #160E25;
+    ;
+}
+
+nav {
+    height: 55px;
+    display: flex;
+    padding: 20px 36px;
+    background-color: #E72C33;
+    color: #F0E4CE;
+    font-size: 16px;
+    font-weight: 500;
+}
