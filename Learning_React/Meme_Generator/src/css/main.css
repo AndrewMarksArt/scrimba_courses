@@ -61,3 +61,8 @@ main {
     font-weight: 700;
     cursor: pointer;
 }
+
+.memeImg {
+    max-width: 100%;
+    margin-top: 36px;
+}
