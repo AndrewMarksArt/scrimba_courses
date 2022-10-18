@@ -15,8 +15,9 @@ export default function Meme() {
         const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url
-        setMeme(prevMeme => ({
-            ...prevMeme,
+        setMeme(({
+            topText: "",
+            bottomText: "",
             randomImage: url
         }))
         
